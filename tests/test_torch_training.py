@@ -109,8 +109,14 @@ def test_mobilenet_contract_without_pretrained_download():
 def test_mobilenet_training_and_export_without_download(tmp_path, manifests):
     torch.set_num_threads(1)
     config = TrainingConfig(
-        pretrained=False, width=64, height=64, epochs=1, batch_size=2,
-        device="cpu", amp=False, num_workers=0,
+        pretrained=False,
+        width=64,
+        height=64,
+        epochs=1,
+        batch_size=2,
+        device="cpu",
+        amp=False,
+        num_workers=0,
     )
     run = tmp_path / "mobilenet-run"
     train(*manifests, config, run, tmp_path / "local", code_revision="test")
