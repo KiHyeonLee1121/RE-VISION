@@ -1,0 +1,2 @@
+{"sample_id":"part001-front","part_id":"part001","session_id":"session001","light_id":"front","image_path":"raw/part001-front.png","label":"defective","defects":[{"kind":"scratch","bbox_xyxy":[20,30,80,45]}]}
+{"sample_id":"part001-rear","part_id":"part001","session_id":"session001","light_id":"rear","image_path":"raw/part001-rear.png","label":"defective","defects":[{"kind":"scratch","bbox_xyxy":[20,30,80,45]}]}

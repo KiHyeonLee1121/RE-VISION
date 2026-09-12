@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "re-vision"
+version = "0.1.0"
+description = "Modular adaptive multi-light inspection starter for RE-VISION"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+vision = ["numpy>=1.26,<3", "Pillow>=10,<13", "onnxruntime>=1.18,<2"]
+train = ["numpy>=1.26,<3", "Pillow>=10,<13", "onnx>=1.16,<2"]
+hardware = ["opencv-python-headless>=4.9,<5", "pyserial>=3.5,<4"]
+api = ["fastapi>=0.115,<1", "uvicorn>=0.30,<1"]
+dev = ["pytest>=8,<10", "ruff>=0.9,<1", "httpx>=0.27,<1", "onnx>=1.16,<2"]
+
+[project.scripts]
+revision = "revision.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/test_vision.py" = ["E402"] # Optional dependencies are checked before imports.

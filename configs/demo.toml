@@ -1,0 +1,12 @@
+mode = "demo"
+scenario = "scratch"
+output_dir = "../outputs/demo"
+
+[inspection]
+max_views = 4
+budget_ms = 5000
+pass_threshold = 0.15
+fail_threshold = 0.85
+min_pass_views = 1
+max_saturation_ratio = 0.25
+max_dark_ratio = 0.80

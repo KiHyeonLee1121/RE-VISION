@@ -1,0 +1,50 @@
+# Copy to local.toml; configure actual camera, firmware channels and model before use.
+mode = "live"
+output_dir = "../outputs/live"
+model_manifest = "../models/weights/baseline/manifest.json"
+
+[inspection]
+max_views = 4
+budget_ms = 5000
+pass_threshold = 0.15
+fail_threshold = 0.85
+min_pass_views = 2
+
+[camera]
+device = 0
+width = 1280
+height = 720
+flush_frames = 3
+
+[serial]
+port = "/dev/ttyACM0" # Example only; on Windows this could be COM3.
+baudrate = 115200
+timeout_s = 1.0
+
+[[actions]]
+id = "front"
+channel = 0
+direction_deg = 0
+intensity = 0.7
+settle_ms = 100
+
+[[actions]]
+id = "rear"
+channel = 1
+direction_deg = 180
+intensity = 0.7
+settle_ms = 100
+
+[[actions]]
+id = "left"
+channel = 2
+direction_deg = 90
+intensity = 0.7
+settle_ms = 100
+
+[[actions]]
+id = "right_dim"
+channel = 3
+direction_deg = 270
+intensity = 0.35
+settle_ms = 100

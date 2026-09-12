@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "model_id": "replace-with-trained-model-version",
+  "model_path": "weights/model.onnx",
+  "sha256": "replace-with-actual-model-sha256",
+  "task": "binary_classification",
+  "width": 320,
+  "height": 320,
+  "color": "RGB",
+  "layout": "NCHW",
+  "dtype": "float32",
+  "resize": "letterbox",
+  "mean": [0.0, 0.0, 0.0],
+  "std": [1.0, 1.0, 1.0],
+  "pad_value": 114,
+  "input_name": "images",
+  "output_name": "defect_score",
+  "output_kind": "defect_probability",
+  "providers": ["CPUExecutionProvider"]
+}

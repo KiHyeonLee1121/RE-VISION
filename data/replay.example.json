@@ -1,0 +1,4 @@
+{
+  "front": {"image_path": "raw/part001-front.png", "width": 1280, "height": 720, "captured_at": "2026-09-12T00:00:00+00:00", "defect_score": 0.52, "saturation_ratio": 0.02, "dark_ratio": 0.01},
+  "rear": {"image_path": "raw/part001-rear.png", "width": 1280, "height": 720, "captured_at": "2026-09-12T00:00:01+00:00", "defect_score": 0.96, "saturation_ratio": 0.02, "dark_ratio": 0.01}
+}

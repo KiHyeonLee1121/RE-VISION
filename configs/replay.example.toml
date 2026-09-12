@@ -1,0 +1,10 @@
+mode = "replay"
+output_dir = "../outputs/replay"
+replay_manifest = "../data/replay.example.json"
+# Optional: real ONNX inference on recorded images instead of recorded fixture scores.
+# model_manifest = "../models/weights/baseline/manifest.json"
+
+[inspection]
+max_views = 4
+min_pass_views = 2
+budget_ms = 10000
