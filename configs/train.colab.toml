@@ -1,0 +1,14 @@
+# Read by revision.ml.train_torch.TrainingConfig.from_toml().
+# Final detector/segmenter architecture remains a separate development decision.
+architecture = "mobilenet_v3_small"
+pretrained = true
+epochs = 20
+batch_size = 16
+learning_rate = 0.0003
+weight_decay = 0.0001
+width = 224
+height = 224
+seed = 42
+num_workers = 2
+device = "cuda"
+amp = true

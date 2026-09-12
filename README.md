@@ -86,6 +86,15 @@ python -m revision serve --config configs/demo.toml
 
 ## 학습과 데이터
 
+**학습 환경: Colab Pro GPU / 데이터·체크포인트·모델 저장: Google Drive**
+
+[Colab 학습 노트북 열기](https://colab.research.google.com/github/KiHyeonLee1121/RE-VISION/blob/main/notebooks/01_train_colab.ipynb)
+· [Drive 폴더·라벨·학습 재개 안내](docs/colab-drive.md)
+
+노트북에 Drive 마운트, 데이터 폴더/ZIP 로컬 복사, GPU 학습,
+매 epoch 체크포인트 저장·재개, 최고 모델 ONNX export와 기존 추론 코드 검증을 연결했습니다.
+기본 GPU 학습 예제는 MobileNetV3-Small 이진 분류 fine-tuning이며 최종 검출·분할 모델은 후속 개발입니다.
+
 데이터 중복 검사, 부품·촬영 세션에 따른 분할, 작은 logistic 기준선 학습,
 ONNX export, manifest 검증, letterbox 전처리, 제품별 결과 지표 계산을 제공합니다.
 실행 명령과 라벨 계약은 [데이터·모델 안내](docs/data-and-models.md)에 있습니다.
@@ -110,6 +119,7 @@ CI는 선택 패키지까지 설치해 Python 3.11/3.12에서 검사하도록 �
 - [자료별 요구사항과 구현 현황](docs/requirements.md)
 - [구조·데이터 흐름·교체 방법](docs/architecture.md)
 - [데이터·학습·평가](docs/data-and-models.md)
+- [Colab Pro·Google Drive 학습과 재개](docs/colab-drive.md)
 - [MCU 조명 통신 규격](hardware/protocol.md)
 - [WISE-PaaS 실연동 준비](docs/wise-paas.md)
 - [단계별 개발 순서](docs/roadmap.md)

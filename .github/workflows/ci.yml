@@ -23,3 +23,15 @@ jobs:
       - run: python -m pytest -q
       - run: python -m revision demo --scenario scratch
       - run: python -m revision demo --scenario uncertain
+
+  colab-training-smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      # CPU smoke test of the GPU-capable code path; no Colab account or real data needed.
+      - run: python -m pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+      - run: python -m pip install -e ".[dev,colab]"
+      - run: python -m pytest tests/test_torch_training.py tests/test_colab_storage.py tests/test_notebook.py -q

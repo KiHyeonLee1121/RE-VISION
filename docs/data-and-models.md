@@ -1,5 +1,9 @@
 # 데이터 → 학습 → 추론
 
+팀의 기본 학습 환경은 **Colab Pro GPU + Google Drive 데이터 저장**입니다.
+[전용 노트북과 경로·체크포인트 안내](colab-drive.md)를 먼저 확인하세요.
+GPU용 MobileNetV3-Small 분류 학습과 아래 CPU logistic 연결 예제를 모두 제공합니다.
+
 ## 수집 계약
 
 기본 단위는 **같은 물리적 부품을 여러 조명에서 촬영한 묶음**입니다.

@@ -6,6 +6,9 @@
 USB/serial 연결용 adapter, SQLite/outbox, 로컬 API, 데이터 검증·그룹 분할,
 최소 학습/ONNX export/runtime, 핵심 테스트 및 CI 설정.
 
+Colab Pro/Drive 노트북과 GPU 분류 fine-tuning, epoch 체크포인트 저장·재개,
+Drive 모델 묶음 저장도 제공합니다. 실제 계정·GPU·팀 데이터로의 학습은 아직 수행하지 않았습니다.
+
 ## 1. 장치와 데이터 확보
 
 담당 영역: hardware + data.

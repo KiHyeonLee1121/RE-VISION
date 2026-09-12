@@ -34,6 +34,9 @@ flowchart TD
 | `src/revision/api.py` | 로컬 검사·기록 API |
 | `src/revision/service.py` | 장치와 알고리즘 조립·수명 관리 |
 | `configs/` | 하드웨어, 판정 한도, 조명 후보 설정 |
+| `notebooks/01_train_colab.ipynb` | Colab GPU·Drive 학습 실행 |
+| `src/revision/ml/train_torch.py`, `export_torch.py`, `artifacts.py` | GPU 학습·재개, ONNX 검증, 영속 저장 |
+| `src/revision/data/staging.py` | Drive 폴더/ZIP → 작업 디스크 복사·분할 |
 | `data/`, `models/` | 데이터 형식 예제와 모델 manifest |
 | `hardware/` | MCU 통신 규격과 장비 연결 지침 |
 | `apps/dashboard/`, `integrations/` | WISE 대시보드와 생산라인 확장 계약 |
